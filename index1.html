@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LMS Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f5f7fa;
+        }
+
+        .login {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left {
+            flex: 1;
+            background: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login">
+
+    <div class="left">
+        <h2 style="color:white;">TUIT LMS</h2>
+    </div>
+
+    <div class="right">
+        <div class="box">
+
+            <h3>Login</h3>
+
+            <input type="text" id="login" placeholder="Login">
+            <input type="password" id="parol" placeholder="Parol">
+
+            <button onclick="kirish()">Kirish</button>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+function kirish() {
+    var login = document.getElementById("login").value;
+    var parol = document.getElementById("parol").value;
+
+    if(login === "student" && parol === "1234") {
+        window.location.href = "dashboard.html";
+    } else {
+        alert("Login yoki parol noto‘g‘ri!");
+    }
+}
+</script>
+
+</body>
+</html>
